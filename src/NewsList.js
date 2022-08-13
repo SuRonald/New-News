@@ -4,6 +4,7 @@ import NewsItem from "./NewsItem";
 import Aside from "./Aside";
 
 const NewsList = () => {
+    // Note: Link API base (Pake parameter language english) = http://api.mediastack.com/v1/news?access_key=82911763eb8f145de0c286180df1661f&languages=en
     const {datas: articles} = useFetch('http://api.mediastack.com/v1/news?access_key=34864e80d74349037192ca1414391249&languages=en');
 
     return (

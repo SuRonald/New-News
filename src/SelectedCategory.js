@@ -7,6 +7,7 @@ import Aside from "./Aside";
 const SelectedCategory = () => {
     const {category} = useParams();
     console.log(category);
+    // Note: Link API untuk categoty = http://api.mediastack.com/v1/news?access_key=82911763eb8f145de0c286180df1661f&languages=en&categories=
     const url = "http://api.mediastack.com/v1/news?access_key=34864e80d74349037192ca1414391249&languages=en&categories=" + category;
     console.log(url);
     const {datas: articles} = useFetch(url);
