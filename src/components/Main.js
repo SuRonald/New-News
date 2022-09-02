@@ -8,14 +8,13 @@ import Sidebar from "./Sidebar";
 function Main({ passDetail }) {
     const { tag, code } = useParams();
     let newsList;
-    let url =
-        "http://api.mediastack.com/v1/news?access_key=0aa2d2e86dcec2dd518398a64d077f24&sources=cnn,bbc&languages=en";
+    let url = `http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_MEDIA_KEY}&sources=cnn,bbc&languages=en`;
 
     // newsList = getData();
 
     // console.log(tag + " + " + code);
     if (tag && code) {
-        url = url + "&" + tag + "=" + code;
+        url = `${url}&${tag}=${code}`;
         // console.log(url);
     }
 
